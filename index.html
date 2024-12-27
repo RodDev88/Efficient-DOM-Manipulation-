@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array list exercise</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Escala musical Mayor de Do</h2>
+    <div id="escalaLista"></div>
+
+    <script>
+      //******************************************************
+      //EJERCICIO SIN ACTUALIZACION DE DOM EN CADA ITERACION
+      //ESTA ES LA FORMA RECOMENDADA POR BUENA PRÁCTICA
+      //******************************************************
+
+      //Arreglo
+      const escalaMayorDeDo = ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si"];
+
+      //Obtener elemento html
+      const elementoEscalaLista = document.querySelector("#escalaLista");
+
+      //Defino variable acumuladora de notas
+      let html = "";
+
+      //Ciclo
+      for (const nota of escalaMayorDeDo) {
+        html += `<li>${nota}</li>`;
+      }
+
+      //Renderizo reemplazando ele html con variable contenedora de la lista
+      elementoEscalaLista.innerHTML = html;
+
+      //******************************************************
+      //EJERCICIO CON ACTUALIZACION DE DOM EN CADA ITERACION
+      //******************************************************
+
+      /*  //Obtener elemento html
+      const elementoEscalaLista = document.querySelector("#escalaLista");
+      //console.log(elementoEscalaLista);
+
+      //Ciclo for
+      for (const nota of escalaMayorDeDo) {
+        console.log(nota);
+        //agregamos escala con formato lista al ele html
+        elementoEscalaLista.innerHTML += `<li>${nota}</li>`;
+      } */
+    </script>
+  </body>
+</html>
